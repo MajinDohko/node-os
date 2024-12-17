@@ -2,7 +2,7 @@ const { obtenerDatos } = require('./osModule');
 const { obtenerInformacionRed } = require('./networkModule');
 
 function imprimirInformacionSistema() {
-    console.log('=== Información del Sistema Operativo ===');
+    console.log('Información del SO');
     const informacionSistema = obtenerDatos();
     for (const [key, value] of Object.entries(informacionSistema)) {
         console.log(`${key}: ${value}`);
@@ -10,7 +10,7 @@ function imprimirInformacionSistema() {
 }
 
 function imprimirInformacionRed() {
-    console.log('=== Información de las Interfaces de Red ===');
+    console.log('Información de la Interfaz de Red');
     const informacionRed = obtenerInformacionRed();
     for (const [name, interfaces] of Object.entries(informacionRed)) {
         console.log(`Interfaz ${name}:`);
